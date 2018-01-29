@@ -24,7 +24,7 @@ biweeklyPay = salary/26;
 
 // output - display weekly and biweekly gross pay
 cout << endl << "Weekly Pay: $" << weeklyPay << endl;
-cout << endl << "biWeekly Pay: $" << endl;
+cout << endl << "biWeekly Pay: $" << biweeklyPay << endl;
 
 return 0; //indicate all is well for the operating system
 } // end of the main function
