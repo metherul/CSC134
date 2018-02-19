@@ -15,11 +15,24 @@ int main()
 	cout << "Enter the sales amount: ";
 	cin >> sales;
 
-	if (sales <= 15000.0)
-		commission = sales * RATE1;
-	else
-		commission = sales * RATE2;
-	//end if
+	switch (sales <= 15000.0)
+	{
+		case true:
+		{
+			commission = sales * RATE1;
+			cout << "true";
+
+			break;
+		}
+
+		case false:
+		{
+			commission = sales * RATE2;
+			cout << "false";
+
+			break;
+		}
+	}
 
 	cout << fixed << setprecision(2);
 	cout << "Commission: $" << commission << endl;
