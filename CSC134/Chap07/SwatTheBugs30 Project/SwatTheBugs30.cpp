@@ -12,10 +12,15 @@ int main()
 
 	cout << "Enter a sales amount (negative number or 0 to end): ";
 	cin >> sales;
+
 	while (sales > 0.0)
 	{
 		commission = sales * COMM_RATE;
 		cout << "Commission: $" << commission << endl;
-	} //end while
+
+		cout << "Enter a sales amount (negative number or 0 to end): ";
+		cin >> sales;
+	} 
+	
 	return 0;
-}	//end of main function
+}	

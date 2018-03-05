@@ -1,26 +1,43 @@
 //Lab7-4.cpp - displays the average electric bill
-//Created/revised by <your name> on <current date>
+//Created/revised by Ethan Green on 3/5/2018
 
-#include <iomanip>
 #include <iostream>
-//end if
-{
-}	//end of main function
-cin >> bill;
-cin >> bill;
-cout << "Average electric bill for " << months << " months: $" << avgBill << endl;
-cout << "Bill for month " << months + 1 << ": ";
-cout << "Bill for month 1: ";
-cout << "No bill amount entered." << endl;
-cout << fixed << setprecision(2);
-double avgBill = 0.0;
-double bill = 0.0;
-double totalBills = 0.0;
-else
-if (months > 0)
+#include <iomanip>
+
 int main()
-int months = 0;
-months += 1;
-return 0;
-using namespace std;
-while (bill >= 0.0)
+{
+	auto averageBill = 0.0;
+	auto totalBill = 0.0;
+	auto totalMonths = 0;
+	auto acceptingUserInput = true;
+	
+	std::cout << "Enter your electric bill over a period of months -- type -1 to stop adding amounts." << std::endl;
+
+	while (acceptingUserInput)
+	{
+		auto billStorage = 0.0;
+		totalMonths++;
+
+		std::cout << "Bill for month " << totalMonths << ": $";
+		std::cin >> billStorage;
+
+		if (billStorage < 0.0)
+		{
+			acceptingUserInput = false;
+		}
+
+		else
+		{
+			totalBill += billStorage;
+		}
+	}
+
+	// totalMonths will be 1 higher than it needs to be from the breaking user input
+	totalMonths -= 1;
+	averageBill = (totalBill / static_cast<double>(totalMonths));
+
+	std::cout << std::fixed << std::setprecision(2);
+	std::cout << "Your average electric bill over a span of " << totalMonths << " months: $" << averageBill << std::endl;
+
+	return 0;
+}

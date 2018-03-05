@@ -1,10 +1,9 @@
 //Lab7-1.cpp - calculates the average number of text
 //messages sent each day for 7 days
-//Created/revised by <your name> on <current date>
+//Created/revised by Ethan Green on 3/5/2018
 
 #include <iostream>
 #include <iomanip>
-using namespace std;
 
 int main()
 {	
@@ -13,17 +12,16 @@ int main()
     int dailyTexts = 0;
     double average = 0.0;
  
-	for (day = 1; day < 8; day += 1)
+	for (day = 1; day <= 7; day++)
 	{
-		cout << "How many text messages did you send on day " 
-			<< day << "? ";
-		cin >> dailyTexts;
+		std::cout << "How many text messages did you send on day " << day << "? ";
+		std::cin >> dailyTexts;
 		totalTexts += dailyTexts;
-	}	//end for
+ 	}	
 
 	average = static_cast<double>(totalTexts) / (day - 1);
-	cout << fixed << setprecision(0);
-	cout << endl << "You sent approximately " 
-			<< average << " text messages per day." << endl;
+	std::cout << std::fixed << std::setprecision(0);
+	std::cout << std::endl << "You sent approximately " << average << " text messages per day." << std::endl;
+
     return 0;
-}   //end of main function
+}  

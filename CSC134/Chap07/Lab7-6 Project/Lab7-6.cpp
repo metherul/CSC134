@@ -3,30 +3,50 @@
 
 #include <iostream>
 #include <iomanip>
-using namespace std;
 
 int main()
 {
-	int numPrices     = 0;    //counter
-	double price      = 0.0;
-	double totalPrice = 0.0;  //accumulator
-	double avgPrice   = 0.0;
+	auto inputPriceCount = 0;
+	auto totalPrices = 0.0;
+	auto averagePrice = 0.0;
+	auto acceptingUserInput = true;
 
-	cout << "Price (negative number to end): ";
-	cin >> price;
-	while (price >= 0.0)
-	{    
-		numPrices += 1;    
-		totalPrice += price;    
-		cout << "Next price: ";    
-	} //end while
+	std::cout << "Enter the price per item ($), type -1 to finish." << std::endl;
 
-	if (numPrices > 0) 
-		avgPrice = totalPrice / numPrices;    
-	else    
-		avgPrice = 0.0;
-	// end if
-	cout << fixed << setprecision(2) << endl;
-	cout << "Average price: " << avgPrice << endl;
+	while (acceptingUserInput)
+	{
+		auto temporaryStorage = 0.0;
+		inputPriceCount++;
+
+		std::cout << "Enter the price of item #" << inputPriceCount << ": $";
+		std::cin >> temporaryStorage;
+
+		if (temporaryStorage < 0)
+		{
+			acceptingUserInput = false;
+		}
+
+		else
+		{
+			totalPrices += temporaryStorage;
+		}
+	}
+
+	// Subtract one from inputPriceCount to make up for values added by breaking user entry
+	inputPriceCount -= 1;
+
+	if (inputPriceCount > 0)
+	{
+		averagePrice = (totalPrices / static_cast<double>(inputPriceCount));
+	}
+
+	else
+	{
+		averagePrice = 0.0;
+	}
+
+	std::cout << std::fixed << std::setprecision(2);
+	std::cout << "The average price for " << inputPriceCount << " items and an aggregated cost of $" << totalPrices << " is $" << averagePrice << std::endl;
+
 	return 0;
-}	//end of main function
+}
