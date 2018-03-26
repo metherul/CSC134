@@ -1,0 +1,5 @@
+﻿  Introductory17.cpp
+c:\users\ethanmgreen\documents\programming\csc134\chap09\introductory17\introductory17\introductory17.cpp(39): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\ethanmgreen\documents\programming\csc134\chap09\introductory17\introductory17\introductory17.cpp(44): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Introductory17.vcxproj -> C:\Users\ethanmgreen\Documents\Programming\CSC134\Chap09\Introductory17\Debug\Introductory17.exe
+  Introductory17.vcxproj -> C:\Users\ethanmgreen\Documents\Programming\CSC134\Chap09\Introductory17\Debug\Introductory17.pdb (Partial PDB)

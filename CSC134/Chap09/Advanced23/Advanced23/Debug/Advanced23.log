@@ -1,0 +1,6 @@
+﻿  Advanced23.cpp
+c:\users\ethanmgreen\documents\programming\csc134\chap09\advanced23\advanced23\advanced23.cpp(32): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\ethanmgreen\documents\programming\csc134\chap09\advanced23\advanced23\advanced23.cpp(40): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\ethanmgreen\documents\programming\csc134\chap09\advanced23\advanced23\advanced23.cpp(45): warning C4305: '=': truncation from 'double' to 'float'
+  Advanced23.vcxproj -> C:\Users\ethanmgreen\Documents\Programming\CSC134\Chap09\Advanced23\Debug\Advanced23.exe
+  Advanced23.vcxproj -> C:\Users\ethanmgreen\Documents\Programming\CSC134\Chap09\Advanced23\Debug\Advanced23.pdb (Partial PDB)

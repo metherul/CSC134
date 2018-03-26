@@ -1,11 +1,11 @@
 //SwatTheBugs26.cpp - displays the miles per gallon
-//Created/revised by <your name> on <current date>
+//Created/revised by Ethan Green on 3/26/2018
 
 #include <iostream>
 #include <iomanip>
+
 using namespace std;
 
-//function prototype
 double calcMpg(double, double);
 
 int main()
@@ -19,16 +19,14 @@ int main()
 	cout << "Enter number of gallons: ";
 	cin >> gallons;
 
-	milesPerGal = calcMpg(gallons, miles);
+	milesPerGal = calcMpg(miles, gallons);
 	cout << fixed << setprecision(1);
 	cout << "Miles per gallon: " << milesPerGal << endl;
-	return 0;
-}	//end of main function
 
-//*****function definitions*****
+	return 0;
+}	
+
 double calcMpg(double distance, double galUsed)
 {
-	double mpg = 0.0;
-	mpg = distance / galUsed;
-	return mpg;
-}	//end of calcMpg function
+	return distance / galUsed;
+}	

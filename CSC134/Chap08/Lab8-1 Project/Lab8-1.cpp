@@ -1,5 +1,5 @@
 //Lab8-1.cpp
-//Created/revised by <your name> on <current date>
+//Created/revised by Ethan Green on 3/12/2018
 
 #include <iostream>
 using namespace std;
